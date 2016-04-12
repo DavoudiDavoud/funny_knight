@@ -6,6 +6,7 @@
 
 Window::Window() : gain(5), count(0)
 {
+	
 	knob = new QwtKnob;
 	// set up the gain knob
 	knob->setValue(gain);
@@ -19,7 +20,9 @@ Window::Window() : gain(5), count(0)
 	thermo->setFillBrush( QBrush(Qt::red) );
 	thermo->setRange(0, 20);
 	thermo->show();
-
+	// set up labels
+	label = new QLabel("Channel");
+	label->show();
 
 	// set up the initial plot data
 	for( int index=0; index<plotDataSize; ++index )
@@ -46,6 +49,7 @@ Window::Window() : gain(5), count(0)
 	// plot to the left of knob and thermometer
 	hLayout = new QHBoxLayout;
 	hLayout->addLayout(vLayout);
+	hlayout->addLayout(label);
 	hLayout->addWidget(plot);
 
 	setLayout(hLayout);
