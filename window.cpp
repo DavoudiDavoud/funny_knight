@@ -6,6 +6,7 @@
 
 Window::Window() : gain(5), count(0)
 {
+	chnum = 0;
 	
 	knob = new QwtKnob;
 	// set up the gain knob
@@ -21,7 +22,7 @@ Window::Window() : gain(5), count(0)
 	thermo->setRange(0, 20);
 	thermo->show();
 	// set up labels
-	label = new QLabel("Channel:");
+	label = new QLabel("Channel0");
 	label->show();
 	// set up button
 	ch1b = new QPushButton("switch channel");
@@ -101,6 +102,12 @@ void Window::setGain(double gain)
 }
 
 void Window::ch1bc(void){
-    label->setText("channel1");
-	
+	if(chnum){
+	chnum = 0;
+    	label->setText("channel0");
+	}
+	else{
+	chnum = 1;
+	label->setText("channel1");
+	}
 }
