@@ -79,14 +79,9 @@ Window::~Window() {
 }
 
 void Window::timerEvent( QTimerEvent * )
-{	if (chnum){
+{
 	inVal = gain * sin( M_PI * count/50.0 );
 	++count;}
-	else {
-	inVal = gain * 1;
-	++count;}		
-	
-
 	// add the new input to the plot
 	memmove( yData, yData+1, (plotDataSize-1) * sizeof(double) );
 	yData[plotDataSize-1] = inVal;
