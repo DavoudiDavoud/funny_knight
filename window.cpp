@@ -85,7 +85,7 @@ void Window::timerEvent( QTimerEvent * )
 	else {
 	double inVal = gain * 1;
 	++count;}		
-	}
+	
 
 	// add the new input to the plot
 	memmove( yData, yData+1, (plotDataSize-1) * sizeof(double) );
