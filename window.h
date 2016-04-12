@@ -6,6 +6,9 @@
 #include <qwt/qwt_plot.h>
 #include <qwt/qwt_plot_curve.h>
 
+#include <QApplication>
+#include <QLabel>
+
 #include <QBoxLayout>
 
 // #include "adcreader.h"
@@ -32,7 +35,7 @@ private:
 	QwtThermo    *thermo;
 	QwtPlot      *plot;
 	QwtPlotCurve *curve;
-
+	Qlabel       *label;
 	// layout elements from Qt itself http://qt-project.org/doc/qt-4.8/classes.html
 	QVBoxLayout  *vLayout;  // vertical layout
 	QHBoxLayout  *hLayout;  // horizontal layout
