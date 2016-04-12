@@ -21,10 +21,12 @@ Window::Window() : gain(5), count(0)
 	thermo->setRange(0, 20);
 	thermo->show();
 	// set up labels
-	
-	label = new QLabel("Channel1");
+	label = new QLabel("Channel:");
 	label->show();
-
+	// set up button
+	ch1b = new QPushButton("channel1");
+	connect(ch1b, SIGNAL(clicked()), this, SLOT(ch1bc()));
+	
 	// set up the initial plot data
 	for( int index=0; index<plotDataSize; ++index )
 	{
@@ -50,10 +52,13 @@ Window::Window() : gain(5), count(0)
 	// plot to the left of knob and thermometer
 	hLayout = new QHBoxLayout;
 	hLayout->addLayout(vLayout);
+	hLayout->addWidget(ch1b);
 	hLayout->addWidget(label);
 	hLayout->addWidget(plot);
 
 	setLayout(hLayout);
+	
+	
 
 	// This is a demo for a thread which can be
 	// used to read from the ADC asynchronously.
@@ -93,4 +98,9 @@ void Window::setGain(double gain)
 {
 	// for example purposes just change the amplitude of the generated input
 	this->gain = gain;
+}
+
+void Window::ch1bc(void){
+    label->setText("channel1");
+	
 }
