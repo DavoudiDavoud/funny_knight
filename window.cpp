@@ -25,7 +25,7 @@ Window::Window() : gain(5), count(0)
 	label->show();
 	// set up button
 	ch1b = new QPushButton("channel1");
-	connect(ch1b, SIGNAL(clicked()), this, SLOT(ch1bc()));
+	connect(ch1b, SIGNAL(clicked()), SLOT(ch1bc()));
 	
 	// set up the initial plot data
 	for( int index=0; index<plotDataSize; ++index )
