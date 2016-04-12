@@ -24,7 +24,7 @@ Window::Window() : gain(5), count(0)
 	label = new QLabel("Channel:");
 	label->show();
 	// set up button
-	ch1b = new QPushButton("channel1");
+	ch1b = new QPushButton("switch channel");
 	connect(ch1b, SIGNAL(clicked()), SLOT(ch1bc()));
 	
 	// set up the initial plot data
