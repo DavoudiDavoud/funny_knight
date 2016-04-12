@@ -1,5 +1,4 @@
 #include "window.h"
-#include <QLabel>
 // #include "adcreader.h"
 
 #include <cmath>  // for sine stuff
