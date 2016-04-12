@@ -54,6 +54,7 @@ private:
 	double gain;
 	int count;
 	bool chnum;
+	double inval;
 	
 
 //	ADCreader *adcreader;
