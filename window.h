@@ -29,6 +29,7 @@ public:
 
 public slots:
 	void setGain(double gain);
+	void ch1bc(void);
 
 // internal variables for the window class
 private:
@@ -51,8 +52,8 @@ private:
 
 	double gain;
 	int count;
-private slots:
-	void ch1bc();
+
+	
 
 //	ADCreader *adcreader;
 };
