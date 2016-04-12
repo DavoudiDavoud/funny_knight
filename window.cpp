@@ -21,7 +21,7 @@ Window::Window() : gain(5), count(0)
 	thermo->setRange(0, 20);
 	thermo->show();
 	// set up labels
-	QLabel *label;
+	
 	label = new QLabel("Channel");
 	label->show();
 
