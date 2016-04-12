@@ -39,6 +39,7 @@ private:
 	QwtPlotCurve *curve;
 	QLabel *label;
 	QPushButton *ch1b;
+
 	
 	// layout elements from Qt itself http://qt-project.org/doc/qt-4.8/classes.html
 	QVBoxLayout  *vLayout;  // vertical layout
@@ -52,7 +53,7 @@ private:
 
 	double gain;
 	int count;
-
+	bool chnum;
 	
 
 //	ADCreader *adcreader;
