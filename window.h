@@ -8,6 +8,7 @@
 
 #include <QApplication>
 #include <QLabel>
+#include <QPushButton>
 
 #include <QBoxLayout>
 
@@ -36,6 +37,8 @@ private:
 	QwtPlot      *plot;
 	QwtPlotCurve *curve;
 	QLabel *label;
+	QPushButton *ch1b;
+	
 	// layout elements from Qt itself http://qt-project.org/doc/qt-4.8/classes.html
 	QVBoxLayout  *vLayout;  // vertical layout
 	QHBoxLayout  *hLayout;  // horizontal layout
@@ -48,6 +51,8 @@ private:
 
 	double gain;
 	int count;
+private slots:
+	void ch1bc();
 
 //	ADCreader *adcreader;
 };
