@@ -22,7 +22,7 @@ Window::Window() : gain(5), count(0)
 	thermo->show();
 	// set up labels
 	
-	label = new QLabel("Channel");
+	label = new QLabel("Channel1");
 	label->show();
 
 	// set up the initial plot data
