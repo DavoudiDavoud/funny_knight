@@ -35,7 +35,6 @@ private:
 	QwtThermo    *thermo;
 	QwtPlot      *plot;
 	QwtPlotCurve *curve;
-	QLabel       *label;
 	// layout elements from Qt itself http://qt-project.org/doc/qt-4.8/classes.html
 	QVBoxLayout  *vLayout;  // vertical layout
 	QHBoxLayout  *hLayout;  // horizontal layout
