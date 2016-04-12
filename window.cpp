@@ -1,4 +1,5 @@
 #include "window.h"
+#include <QLabel>
 // #include "adcreader.h"
 
 #include <cmath>  // for sine stuff
@@ -21,6 +22,7 @@ Window::Window() : gain(5), count(0)
 	thermo->setRange(0, 20);
 	thermo->show();
 	// set up labels
+	QLabel *label;
 	label = new QLabel("Channel");
 	label->show();
 
@@ -49,7 +51,7 @@ Window::Window() : gain(5), count(0)
 	// plot to the left of knob and thermometer
 	hLayout = new QHBoxLayout;
 	hLayout->addLayout(vLayout);
-	hlayout->addWidget(label);
+	hLayout->addWidget(label);
 	hLayout->addWidget(plot);
 
 	setLayout(hLayout);
