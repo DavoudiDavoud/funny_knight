@@ -80,10 +80,10 @@ Window::~Window() {
 
 void Window::timerEvent( QTimerEvent * )
 {	if (chnum){
-	double inVal = gain * sin( M_PI * count/50.0 );
+	inVal = gain * sin( M_PI * count/50.0 );
 	++count;}
 	else {
-	double inVal = gain * 1;
+	inVal = gain * 1;
 	++count;}		
 	
 
