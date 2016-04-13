@@ -21,6 +21,7 @@ class Window : public QWidget
 	Q_OBJECT
 
 public:
+	int id;
 	Window(); // default constructor - called when a Window is declared without arguments
 
 	~Window();
