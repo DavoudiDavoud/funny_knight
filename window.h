@@ -1,8 +1,7 @@
 #ifndef WINDOW_H
 #define WINDOW_H
 
-#include <qwt/qwt_thermo.h>
-#include <qwt/qwt_knob.h>
+
 #include <qwt/qwt_plot.h>
 #include <qwt/qwt_plot_curve.h>
 
@@ -31,13 +30,11 @@ public:
 	void timerEvent( QTimerEvent * );
 
 public slots:
-	void setGain(double gain);
 	void ch1bc(void);
 
 // internal variables for the window class
 private:
-	QwtKnob      *knob;
-	QwtThermo    *thermo;
+
 	QwtPlot      *plot;
 	QwtPlotCurve *curve;
 	QLabel *label;
@@ -54,7 +51,7 @@ private:
 	double xData[plotDataSize];
 	double yData[plotDataSize];
 
-	double gain;
+	
 	int count;
 	bool chnum;
 
