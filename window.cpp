@@ -82,7 +82,7 @@ Window::~Window() {
 
 void Window::timerEvent( QTimerEvent * )
 {
-	double inVal = gain * sin( M_PI * count/50.0 );
+	double inVal = gain * opch(ch,count);
 	++count;
 	printf("channel: %d \r",chnum);
 	// add the new input to the plot
@@ -114,4 +114,12 @@ void Window::ch1bc(void){
 	label->setText("channel1");
 	killTimer(id);
 	}
+}
+
+double Window::opch(bool ch, int c){
+	if (ch)
+		return sin( M_PI * c/50.0 );
+	else 
+		return 1;
+	
 }
