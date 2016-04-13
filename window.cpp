@@ -107,9 +107,11 @@ void Window::ch1bc(void){
 	if(chnum){
 	chnum = 0;
     	label->setText("channel0");
+    	window.killTimer(id);
 	}
 	else{
 	chnum = 1;
 	label->setText("channel1");
+	window.killTimer(id)
 	}
 }
