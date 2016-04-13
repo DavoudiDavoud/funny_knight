@@ -23,10 +23,10 @@ class Window : public QWidget
 public:
 	int id;
 	Window(); // default constructor - called when a Window is declared without arguments
-
+	double opch(bool ch);
 	~Window();
 	
-	double opch(bool ch);
+	
 
 	void timerEvent( QTimerEvent * );
 
