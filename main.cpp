@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
 	// create the window
 	Window window;
 	window.showMaximized();
-	window.startTimer(40);
+	window.id = window.startTimer(40);
 
 
 	
