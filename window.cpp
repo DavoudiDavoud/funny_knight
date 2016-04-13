@@ -8,8 +8,7 @@ Window::Window() : count(0)
 {
 	chnum = 0;
 	
-	knob = new QwtKnob;
-	// set up the gain knob
+	
 	
 	// set up labels
 	label = new QLabel("Channel0");
@@ -22,7 +21,7 @@ Window::Window() : count(0)
 	for( int index=0; index<plotDataSize; ++index )
 	{
 		xData[index] = index;
-		yData[index] = gain * sin( M_PI * index/50 );
+		yData[index] = sin( M_PI * index/50 );
 	}
 
 	curve = new QwtPlotCurve;
