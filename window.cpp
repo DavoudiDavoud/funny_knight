@@ -58,7 +58,7 @@ Window::Window() : gain(5), count(0)
 	hLayout->addWidget(plot);
 
 	setLayout(hLayout);
-	prinf("ID %d: ",id);
+	printf("ID %d: ",id);
 	
 	// call the window.timerEvent function every 40 ms
 	
