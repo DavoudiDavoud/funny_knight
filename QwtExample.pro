@@ -8,8 +8,8 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = QwtExample
 
-LIBS += -lqwt -lm -lbcm2835 -lrt
+LIBS += -lqwt -lm 
 
-HEADERS += window.h adcreader.h gz_clk.h gpio-sysfs.h
+HEADERS += window.h adcreader.h 
 
-SOURCES += main.cpp window.cpp gz_clk.cpp adcreader.cpp gpio-sysfs.cpp
+SOURCES += main.cpp window.cpp adcreader.cpp 
