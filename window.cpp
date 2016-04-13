@@ -82,7 +82,7 @@ Window::~Window() {
 
 void Window::timerEvent( QTimerEvent * )
 {
-	double inVal = gain * opch(ch,count);
+	double inVal = gain * opch(chnum,count);
 	++count;
 	printf("channel: %d \r",chnum);
 	// add the new input to the plot
