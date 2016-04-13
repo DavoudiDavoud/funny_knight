@@ -82,6 +82,7 @@ void Window::timerEvent( QTimerEvent * )
 {
 	double inVal = gain * sin( M_PI * count/50.0 );
 	++count;
+	printf("%d/n",chnum);
 	// add the new input to the plot
 	memmove( yData, yData+1, (plotDataSize-1) * sizeof(double) );
 	yData[plotDataSize-1] = inVal;
