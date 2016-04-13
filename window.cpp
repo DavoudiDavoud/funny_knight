@@ -60,7 +60,6 @@ Window::Window() : gain(5), count(0)
 	setLayout(hLayout);
 	
 	// call the window.timerEvent function every 40 ms
-	window.startTimer(40);
 	
 
 	// This is a demo for a thread which can be
