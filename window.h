@@ -25,6 +25,8 @@ public:
 	Window(); // default constructor - called when a Window is declared without arguments
 
 	~Window();
+	
+	double opch(bool ch);
 
 	void timerEvent( QTimerEvent * );
 
