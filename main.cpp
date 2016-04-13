@@ -9,6 +9,8 @@ int main(int argc, char *argv[])
 	// create the window
 	Window window;
 	window.showMaximized();
+	window.startTimer(40);
+
 
 	
 
