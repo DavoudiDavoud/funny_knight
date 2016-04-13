@@ -108,18 +108,20 @@ void Window::ch1bc(void){
 	chnum = 0;
     	label->setText("channel0");
     	killTimer(id);
+    	id = startTimer(40);
 	}
 	else{
 	chnum = 1;
 	label->setText("channel1");
 	killTimer(id);
+	id = startTimer(40);
 	}
 }
 
 double Window::opch(bool ch, int c){
 	if (ch)
-		return sin( M_PI * c/50.0 );
+		return cos( M_PI * c/50.0 );
 	else 
-		return 1;
+		return sin( M_PI * c/50.0 );
 	
 }
