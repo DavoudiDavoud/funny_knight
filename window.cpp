@@ -58,7 +58,7 @@ Window::Window() : gain(5), count(0)
 	hLayout->addWidget(plot);
 
 	setLayout(hLayout);
-	printf("ID %d: ",id);
+	printf("\n\n\nID:     %d\n ",id);
 	
 	// call the window.timerEvent function every 40 ms
 	
@@ -84,7 +84,7 @@ void Window::timerEvent( QTimerEvent * )
 {
 	double inVal = gain * sin( M_PI * count/50.0 );
 	++count;
-	printf("%d/n",chnum);
+	printf("channel: %d \r",chnum);
 	// add the new input to the plot
 	memmove( yData, yData+1, (plotDataSize-1) * sizeof(double) );
 	yData[plotDataSize-1] = inVal;
