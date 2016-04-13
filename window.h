@@ -23,7 +23,7 @@ class Window : public QWidget
 public:
 	int id;
 	Window(); // default constructor - called when a Window is declared without arguments
-	double opch(bool ch);
+	double opch(bool ch,int c);
 	~Window();
 	
 	
