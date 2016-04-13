@@ -10,7 +10,6 @@
 #include <QPushButton>
 
 #include <QBoxLayout>
-
 #include "adcreader.h"
 
 // class definition 'Window'
